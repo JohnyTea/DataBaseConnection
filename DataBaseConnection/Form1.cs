@@ -34,6 +34,7 @@ namespace DataBaseConnection
             DataBase.OpenConection();
             MessageBox.Show("Connection Open  !");
             UpdateMoviesListBox();
+            UpdateActorListBox();
         }
 
         private void UpdateMoviesListBox()
@@ -61,13 +62,38 @@ namespace DataBaseConnection
         {
             Movie movie = (Movie)movie_listBox.SelectedItem;
             FilmyAktorzyForm form = new FilmyAktorzyForm(movie, DataBase);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void add_movie_button_Click(object sender, EventArgs e)
         {
             AddMovie form = new AddMovie(DataBase);
-            form.Show();
+            form.ShowDialog();
+            UpdateMoviesListBox();
+
+        }
+
+        private void add_actor_Click(object sender, EventArgs e)
+        {
+            DodajAktora dodajAktoraForm = new DodajAktora(DataBase);
+            dodajAktoraForm.ShowDialog();
+            UpdateActorListBox();
+
+        }
+
+        private void UpdateActorListBox()
+        {
+            List<Actor> actors = new List<Actor>();
+            DataBase.updateActorsList(actors);
+            listBox2.Items.Clear();
+            listBox2.Items.AddRange(actors.Cast<object>().ToArray());
+        }
+
+        private void delete_actor_button_Click(object sender, EventArgs e)
+        {
+            Actor actor = (Actor)listBox2.SelectedItem;
+            DataBase.deleteActor(actor);
+            UpdateActorListBox();
         }
     }
 }

@@ -2,20 +2,20 @@
 {
     public class Movie
     {
-        public Movie(int filmID, string kategoria, string tytul, string rezyser, int rokProdukcji)
+        public Movie(int filmid, Category category, string title, string rezyser, int rok_produkcji)
         {
-            FilmID = filmID;
-            Kategoria = kategoria;
-            Tytul = tytul;
+            FilmID = filmid;
+            Category = category;
+            Tytul = title;
             Rezyser = rezyser;
-            RokProdukcji = rokProdukcji;
+            RokProdukcji = rok_produkcji;
         }
 
         public int FilmID { get; }
-        public string Kategoria { get; }
         public string Tytul { get; }
         public string Rezyser { get; }
         public int RokProdukcji { get; }
+        public Category Category { get; }
 
         public override string ToString()
         {

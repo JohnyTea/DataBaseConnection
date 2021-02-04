@@ -103,6 +103,7 @@
             this.add_actor.TabIndex = 5;
             this.add_actor.Text = "Dodaj Aktora";
             this.add_actor.UseVisualStyleBackColor = true;
+            this.add_actor.Click += new System.EventHandler(this.add_actor_Click);
             // 
             // delete_actor_button
             // 
@@ -112,6 +113,7 @@
             this.delete_actor_button.TabIndex = 6;
             this.delete_actor_button.Text = "Usuń Aktora";
             this.delete_actor_button.UseVisualStyleBackColor = true;
+            this.delete_actor_button.Click += new System.EventHandler(this.delete_actor_button_Click);
             // 
             // exit_button
             // 

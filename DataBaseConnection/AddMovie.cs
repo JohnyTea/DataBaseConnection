@@ -26,12 +26,13 @@ namespace DataBaseConnection
         private void add_button_Click(object sender, EventArgs e)
         {
             string title = tytuł_TextBox.Text;
-            string category = cats_comboBox1.SelectedItem.ToString();
+            Category category = (Category)cats_comboBox1.SelectedItem;
             string rezyser = rezyser_TextBox.Text;
             int rok_produkcji = int.Parse(RokProdukcji_TextBox.Text);
 
             Movie movie = new Movie(0, category, title, rezyser, rok_produkcji);
             DataBase.AddMovie(movie);
+            this.Close();
         }
 
         private void cencel_button_Click(object sender, EventArgs e)

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actor.cs" />
     <Compile Include="AddMovie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +55,12 @@
     </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="DataBaseConnection.cs" />
+    <Compile Include="DodajAktora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajAktora.Designer.cs">
+      <DependentUpon>DodajAktora.cs</DependentUpon>
+    </Compile>
     <Compile Include="FilmActor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddMovie.resx">
       <DependentUpon>AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajAktora.resx">
+      <DependentUpon>DodajAktora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
