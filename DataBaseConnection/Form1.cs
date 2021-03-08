@@ -37,7 +37,7 @@ namespace DataBaseConnection
             UpdateActorListBox();
         }
 
-        private void UpdateMoviesListBox()
+        private void UpdateMoviesListBox() //
         {
             List<Movie> movies = new List<Movie>();
             DataBase.updateMoviesList(movies);
